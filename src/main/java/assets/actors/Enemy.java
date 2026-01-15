@@ -11,7 +11,7 @@ import java.awt.Image;
  *
  * @author administrator
  */
-class Enemy extends GameAsset{
+public class Enemy extends GameAsset{
     
     int health, damage, attack;
     
