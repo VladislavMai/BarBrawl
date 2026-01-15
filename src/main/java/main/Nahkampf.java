@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package barbrawl;
+package main;
 import java.util.concurrent.*;
+import assets.actors.*;
+import java.awt.event.*;
 
 /**
  *
@@ -25,16 +27,17 @@ public class Nahkampf {
         this.ang = ang;
         this.time = time;
     }
-    public void angriff(spieler player, Nahkampf weapon, gegner[] enemy){
+    public void angriff(Player player, Nahkampf weapon, Enemy[] enemy){
            for (int i = 0; i< enemy.length; i++){
                if(
-                   Math.sqrt(Math.pow(player.x-enemy[i].x, 2)+Math.pow(player.y-enemy[i].y, 2))<=rad
-                   && player.angle-ang<=Math.atan((enemy[i].y-player.y)/(enemy[i].x-player.x))<=player.angle+rad
+                   Math.sqrt(Math.pow(player.getX()-enemy[i].getX(), 2)+Math.pow(player.getY()-enemy[i].getY(), 2))<=rad
+                   && player.angle-ang<=Math.atan((enemy[i].getY()-player.getY())/(enemy[i].getX()-player.getX()))<=player.angle+rad
                ){
-                   enemy[i].health = enemy[i].health-dmg;
+                   enemy[i].setHealth(enemy[i].getHealth()-dmg);
                }
            }
             
         }
     }
+
 
