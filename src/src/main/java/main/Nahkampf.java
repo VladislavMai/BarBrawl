@@ -28,10 +28,11 @@ public class Nahkampf {
         this.time = time;
     }
     public void angriff(Player player, Nahkampf weapon, Enemy[] enemy){
-           for (int i = 0; i< enemy.length; i++){
+           for (int i = 0; i< enemy.length; i++){ //Test für jeden Gegner innerhalb ddes Bildschirms
                if(
-                   Math.sqrt(Math.pow(player.getX()-enemy[i].getX(), 2)+Math.pow(player.getY()-enemy[i].getY(), 2))<=rad
-                   && player.getAngle-ang<=Math.atan((enemy[i].getY()-player.getY())/(enemy[i].getX()-player.getX()))<=player.getAngle+rad
+                   Math.sqrt(Math.pow(player.getX()-enemy[i].getX(), 2)+Math.pow(player.getY()-enemy[i].getY(), 2))<=rad //Abstand zum Gegner kleiner gleich Länge der Waffe
+                   && player.getAngle-ang<=Math.atan((enemy[i].getY()-player.getY())/(enemy[i].getX()-player.getX()))<=player.getAngle+rad //Zuerst Blickrichtung Spieler bestimmen, dann den Winkel der Waffe in 
+                   //beide Richtungen addiere, dann Testen für den Winkel des Gegners
                ){
                    enemy[i].setHealth(enemy[i].getHealth()-dmg);
                }
