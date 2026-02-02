@@ -23,9 +23,10 @@ public class Fernkampf {
     public void angriff(Player player, Fernkampf weapon, Enemy[] enemy){
            for (int i = 0; i< enemy.length; i++){
                if(
-                   player.getAngle=Math.atan((enemy[i].getY()-player.getY())/(enemy[i].getX()-player.getX()))
+                   player.getAngle=Math.atan((enemy[i].getY()-player.getY())/(enemy[i].getX()-player.getX())) //Test, ob der Gegner auf der Linie steht
                ){
                    enemy[i].setHealth(enemy[i].getHealth()-dmg);
+                   break; //Falls mehrere Gegner von dem Geschoss getroffen werden sollen, wird nach dem ersten Treffer abgebrochen
                }
            }
             
