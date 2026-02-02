@@ -31,7 +31,7 @@ public class Nahkampf {
            for (int i = 0; i< enemy.length; i++){
                if(
                    Math.sqrt(Math.pow(player.getX()-enemy[i].getX(), 2)+Math.pow(player.getY()-enemy[i].getY(), 2))<=rad
-                   && player.angle-ang<=Math.atan((enemy[i].getY()-player.getY())/(enemy[i].getX()-player.getX()))<=player.angle+rad
+                   && player.getAngle-ang<=Math.atan((enemy[i].getY()-player.getY())/(enemy[i].getX()-player.getX()))<=player.getAngle+rad
                ){
                    enemy[i].setHealth(enemy[i].getHealth()-dmg);
                }
