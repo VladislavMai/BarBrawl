@@ -27,5 +27,8 @@ public class Player extends GameAsset {
     public boolean fight(Enemy e) {
         return true;
     }
-    
+
+    public double getAngle(){
+        double angle;
+        return angle;
 }
