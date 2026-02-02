@@ -13,14 +13,14 @@ public class Fernkampf {
     int dmg;
     double time;
 
-    public Nahkampf(String name, String beschreibung, int dmg, double speed) {
+    public Fernkampf(String name, String beschreibung, int dmg, double speed) {
         this.name = name;
         this.beschreibung = beschreibung;
         this.dmg = dmg;
 
         this.time = time;
     }
-    public void angriff(Player player, Nahkampf weapon, Enemy[] enemy){
+    public void angriff(Player player, Fernkampf weapon, Enemy[] enemy){
            for (int i = 0; i< enemy.length; i++){
                if(
                    player.getAngle=Math.atan((enemy[i].getY()-player.getY())/(enemy[i].getX()-player.getX()))
